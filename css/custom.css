@@ -1,0 +1,71 @@
+body {
+  background-color: #444;
+  background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('../img/logo-180.jpeg');
+  -webkit-background-size: cover;
+  -moz-background-size:  cover;
+  -o-background-size: cover;
+  background-size: cover;
+  /*background: url(http://s18.postimg.org/l7yq0ir3t/pick8_1.jpg);*/
+}
+
+.form-signin input[type="text"] {
+  margin-bottom: 5px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.form-signin input[type="password"] {
+   margin-bottom: 10px;
+   border-top-left-radius: 0;
+   border-top-right-radius: 0;
+}
+
+.form-signin .form-control {
+   position: relative;
+   font-size: 16px;
+   font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+   height: auto;
+   padding: 10px;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+.vertical-offset-100 {
+  padding-top: 100px;
+}
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+.panel {
+  margin-bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.75);
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+}
+
+.panel-default {
+  border: none;
+}
+
+.panel-default>.panel-heading {
+  background-color: rgba(0, 0, 0, 0.7);
+  border: none;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.panel-default>.panel-body {
+  background-color: rgba(0, 0, 0, 0.7);
+  border: none;
+}
+
+.logo-180 {
+  max-width: 50%;
+  max-height: 50%;
+}
