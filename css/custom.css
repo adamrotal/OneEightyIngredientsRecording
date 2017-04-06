@@ -83,3 +83,7 @@ body {
   box-shadow: none;
   color: #ffffff !important;
 }
+
+.modal-header .modal-title {
+  color: #000;
+}
