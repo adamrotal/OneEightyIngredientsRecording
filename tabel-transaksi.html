@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/logo.png">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>One Eighty Ingredients Recording</title>
+
+    <!-- Bootstrap -->
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/tabel.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-md navbar-inverse fixed-top bg-inverse">
+        <a href="#" class="navbar-brand"><img src="img/logo.png" class="logo-180 img-responsive" alt="logo-180"/></a>
+        <a class="navbar-brand" href="#">Transaksi</a>
+        <a class="navbar-brand" href="tabel-data-barang.html">Data Barang</a>
+        <a class="navbar-brand-logout" href="login.html">Logout</a>
+    </nav>
+
+    <h3>Tabel Transaksi</h3>
+    <br>
+
+    <table id="t01" align="center">
+        <tr>
+            <th>ID Transaksi</th>
+            <th>Tanggal Transaksi</th> 
+            <th>Tipe Transaksi</th>
+            <th>ID Bahan</th>
+            <th>Jumlah Perubahan</th>
+            <th>Tanggal Expired</th>
+            <th>User</th>
+            <th>Tanggal diubah</th>
+            <th>Keterangan</th>
+        </tr>
+        <tr>
+            <td>01</td>
+            <td>4 April 2017</td> 
+            <td>Penambahan</td> 
+            <td>02</td> 
+            <td>1</td>
+            <td>31 April 2017</td>
+            <td>Ben</td>
+            <td>2 April 2017</td> 
+            <td> <a href="#">Edit</a> / <a href="#"> Delete </a></td>
+        </tr>
+        <tr>
+            <td>02</td>
+            <td>3 April 2017</td> 
+            <td>Pengurangan</td> 
+            <td>02</td> 
+            <td>20</td>
+            <td>31 April 2017</td>
+            <td>Dim</td>
+            <td>3 April 2017</td> 
+            <td> <a href="#">Edit</a> / <a href="#"> Delete </a></td>
+        </tr>
+    </table>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
