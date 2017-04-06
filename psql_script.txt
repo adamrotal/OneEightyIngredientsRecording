@@ -1,0 +1,45 @@
+CREATE TABLE bahan (
+	id_bahan SERIAL, 
+	nama_bahan varchar(50), 
+	satuan varchar(20), 
+	jumlah_bahan integer,
+	tanggal_pertama_expired DATE, 
+	PRIMARY KEY (id_bahan)
+)
+
+INSERT INTO bahan(nama_bahan, satuan, jumlah_bahan, tanggal_pertama_expired) 
+VALUES ('kopi', 'bungkus', 0, NOW());
+
+INSERT INTO bahan(nama_bahan, satuan, jumlah_bahan, tanggal_pertama_expired) 
+VALUES ('teh', 'bungkus', 0, NOW()), ('susu', 'bungkus', 0, NOW()) 
+;
+
+DELETE FROM users WHERE id_bahan = 0;
+
+CREATE TABLE transaction (
+	transaction_id SERIAL,
+	tanggal_transaksi TIMESTAMP, 
+	tipe_transaksi VARCHAR(15) NOT NULL, 
+	jumlah_perubahan int NOT NULL, 
+	username VARCHAR(30) NOT NULL REFERENCES users(username), 
+	id_bahan integer NOT NULL REFERENCES bahan(id_bahan), 
+	tanggal_expired DATE NOT NULL,
+	tanggal_transaksi_diubah TIMESTAMP, 	
+	PRIMARY KEY(transaction_id)
+)
+
+INSERT INTO transaction(
+	tanggal_transaksi, tipe_transaksi, jumlah_perubahan, username, id_bahan, tanggal_expired
+	)
+VALUES (NOW(), 'Inisiasi', 20, 'admin', 1, NOW());
+
+CREATE TABLE users (
+	username varchar(20) NOT NULL,
+	nama_lengkap varchar(50) NOT NULL,
+	password  VARCHAR(20) NOT NULL,
+	PRIMARY KEY(username)
+)
+
+INSERT INTO users VALUES ('admin', 'Admin 1', 'password');
+INSERT INTO users VALUES ('manager1', 'Operasional Manager', 'password'), 
+('manager2', 'Restaurant Manager', 'password');
