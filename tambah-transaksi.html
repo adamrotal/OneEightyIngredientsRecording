@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Elements - Landed by HTML5 UP</title>
+		<title>One Eighty Ingredients Recording</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="icon" type="image/png" sizes="96x96" href="img/logo.png">
@@ -44,7 +44,7 @@
 				<div id="main" class="wrapper style1">
 					<div class="container">
 						<header class="major">
-							<h2>Transaksi</h2>
+							<h2>Tambah Transaksi</h2>
 						</header>
 
 						<!-- Table -->
@@ -148,65 +148,37 @@
 								</div> -->
 							</section>
 
-						<!-- Buttons -->
-							<section>
-								<h3>Buttons</h3>
-								<ul class="actions">
-									<li><a href="#" class="button special">Special</a></li>
-									<li><a href="#" class="button">Default</a></li>
-								</ul>
-								<ul class="actions">
-									<li><a href="#" class="button special big">Big</a></li>
-									<li><a href="#" class="button">Default</a></li>
-									<li><a href="#" class="button small">Default</a></li>
-								</ul>
-								<div class="row">
-									<div class="6u 12u$(xsmall)">
-										<ul class="actions fit">
-											<li><a href="#" class="button special fit">Fit</a></li>
-											<li><a href="#" class="button fit">Fit</a></li>
-										</ul>
-									</div>
-									<div class="6u$ 12u$(xsmall)">
-										<ul class="actions fit small">
-											<li><a href="#" class="button special fit small">Fit + Small</a></li>
-											<li><a href="#" class="button fit small">Fit + Small</a></li>
-										</ul>
-									</div>
-								</div>
-								<ul class="actions">
-									<li><a href="#" class="button special icon fa-download">Icon</a></li>
-									<li><a href="#" class="button icon fa-download">Icon</a></li>
-								</ul>
-								<ul class="actions">
-									<li><span class="button special disabled">Special</span></li>
-									<li><span class="button disabled">Default</span></li>
-								</ul>
-							</section>
-
 						<!-- Form -->
 							<section>
-								<h3>Form</h3>
 								<form method="post" action="#">
 									<div class="row uniform 50%">
-										<div class="6u 12u$(xsmall)">
+										<!-- 	<div class="6u 12u$(xsmall)">
 											<input type="text" name="name" id="name" value="" placeholder="Name" />
 										</div>
 										<div class="6u$ 12u$(xsmall)">
 											<input type="email" name="email" id="email" value="" placeholder="Email" />
-										</div>
+										</div> -->
 										<div class="12u$">
 											<div class="select-wrapper">
-												<select name="category" id="category">
-													<option value="">- Category -</option>
-													<option value="1">Manufacturing</option>
-													<option value="1">Shipping</option>
-													<option value="1">Administration</option>
-													<option value="1">Human Resources</option>
+												<select name="tipe-transaksi" id="tipe-transaksi">
+													<option value="">Tipe Transaksi</option>
+													<option value="1">Inisiasi</option>
+													<option value="2">Pengurangan</option>
+													<option value="3">Penambahan</option>
 												</select>
 											</div>
 										</div>
-										<div class="4u 12u$(medium)">
+										<div class="12u$">
+											<div class="select-wrapper">
+												<select name="id-barang" id="id-barang">
+													<option value="">ID Barang</option>
+													<option value="1">1234567890</option>
+													<option value="2">1234371024</option>
+													<option value="3">0987654321</option>
+												</select>
+											</div>
+										</div>
+										<!-- <div class="4u 12u$(medium)">
 											<input type="radio" id="priority-low" name="priority" checked>
 											<label for="priority-low">Low Priority</label>
 										</div>
@@ -228,11 +200,17 @@
 										</div>
 										<div class="12u$">
 											<textarea name="message" id="message" placeholder="Enter your message" rows="6"></textarea>
+										</div> -->
+										<div class="12u$">
+											<input type="text" name="jumlah-barang" id="jumlah-barang" value="" placeholder="Jumlah Barang" />
 										</div>
 										<div class="12u$">
+						                    <input type="text" class="form-control" placeholder="25/04/2011" id="datepicker1" />
+						                </div>
+										<div class="12u$"> 
 											<ul class="actions">
-												<li><input type="submit" value="Send Message" class="special" /></li>
-												<li><input type="reset" value="Reset" /></li>
+												<li><input type="submit" value="Submit" class="special" /></li>
+												<li><input type="reset" value="Cancel" /></li>
 											</ul>
 										</div>
 									</div>
@@ -240,7 +218,7 @@
 							</section>
 
 						<!-- Image -->
-							<section>
+							<!-- <section>
 								<h3>Image</h3>
 								<h4>Fit</h4>
 								<div class="box alt">
@@ -264,23 +242,23 @@
 								<h4>Left &amp; Right</h4>
 								<p><span class="image left"><img src="images/pic08.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Cras aliquet accumsan curae accumsan arcu amet egestas placerat odio morbi mi adipiscing col morbi felis faucibus in gravida sollicitudin interdum commodo. Ante aliquam vis iaculis accumsan lorem ipsum dolor sit amet nullam. Cras aliquet accumsan curae accumsan arcu amet egestas placerat odio morbi mi adipiscing col morbi felis faucibus in gravida sollicitudin interdum commodo. Ante aliquam vis iaculis accumsan lorem ipsum dolor sit amet nullam.</p>
 								<p><span class="image right"><img src="images/pic08.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Cras aliquet accumsan curae accumsan arcu amet egestas placerat odio morbi mi adipiscing col morbi felis faucibus in gravida sollicitudin interdum commodo. Ante aliquam vis iaculis accumsan lorem ipsum dolor sit amet nullam. Cras aliquet accumsan curae accumsan arcu amet egestas placerat odio morbi mi adipiscing col morbi felis faucibus in gravida sollicitudin interdum commodo. Ante aliquam vis iaculis accumsan lorem ipsum dolor sit amet nullam.</p>
-							</section>
+							</section> -->
 
 					</div>
 				</div>
 
 			<!-- Footer -->
 				<footer id="footer">
-					<ul class="icons">
+					<!-- <ul class="icons">
 						<li><a href="#" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
 						<li><a href="#" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
 						<li><a href="#" class="icon alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
 						<li><a href="#" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
 						<li><a href="#" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
 						<li><a href="#" class="icon alt fa-envelope"><span class="label">Email</span></a></li>
-					</ul>
+					</ul> -->
 					<ul class="copyright">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						<li>&copy; All rights reserved.</li><li>2017</li>
 					</ul>
 				</footer>
 
@@ -295,6 +273,8 @@
 			<script src="js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="js/main.js"></script>
+			<script src="js/bootstrap.min.js" type="text/javascript"></script>
+			<script src="js/table.js"></script>
 
 	</body>
 </html>
