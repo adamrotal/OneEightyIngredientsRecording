@@ -108,7 +108,9 @@
 															<td><?php echo $row[7]; ?></td>
 								             		<td>
 																<button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" title="edit"><span class="glyphicon glyphicon-pencil"></span></button>
-																<button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" title="delete"><span class="glyphicon glyphicon-trash"></span></button>
+																<button onclick='javascript:confirmationDelete($(this)); return false;' 
+																href='delete-transaksi-handler.php?id=<?php echo $row[0];?>'
+																class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" title="delete"><span class="glyphicon glyphicon-trash"></span></button>
 															</td>
 														</tr>
 													<?php 
@@ -208,26 +210,6 @@
       	<!-- /.modal-dialog -->
     		</div>
 
-		    <div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
-		      <div class="modal-dialog">
-		    		<div class="modal-content">
-		        	<div class="modal-header">
-		        		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-		        		<h4 class="modal-title custom_align" id="Heading">Delete this entry</h4>
-		      		</div>
-		        	<div class="modal-body">
-		       			<div class="alert alert-danger"><span class="glyphicon glyphicon-warning-sign"></span> Are you sure you want to delete this Record?</div>
-		      		</div>
-			        <div class="modal-footer ">
-			        	<button type="button" class="btn btn-success" data-dismiss="modal" data-toggle="modal" data-target="#delete-success" ><span class="glyphicon glyphicon-ok-sign"></span> Yes</button>
-			        	<button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> No</button>
-			      	</div>
-		        </div>
-		    	<!-- /.modal-content -->
-		  		</div>
-		    <!-- /.modal-dialog -->
-		    </div>
-
 			<!-- Footer -->
 				<footer id="footer">
 
@@ -249,19 +231,14 @@
 
 		<script src="js/bootstrap.min.js" type="text/javascript"></script>
 		<script src="js/table.js"></script>
-		<!-- <script type="text/javascript">
-	        $(document).ready(function() {
-							var date_input = $('input[name="date"]');
-							var container = $('.bootstrap-iso form').length > 0 ? $('.bootstrap-iso form').parent() : "body";
-							date_input.datepicker({
-								format: 'dd/mm/yyyy',
-								container : container,
-								todayHighlight : true,
-								autoclose : true,
-							})
-							// $('#datetimepicker1').datetimepicker();
-	        })
-	  </script> -->
+		<script type="text/javascript">
+			function confirmationDelete(anchor)
+			{
+			   var conf = confirm('Are you sure want to delete this record?');
+			   if(conf)
+			      window.location=anchor.attr("href");
+			}
+		</script>
 
 	</body>
 </html>
