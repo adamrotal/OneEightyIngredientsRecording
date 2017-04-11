@@ -29,18 +29,29 @@
                             <img src="img/logo.png" class="logo-180 img-responsive" alt="logo-180"/>
                         </div>
                         <h4>One Eighty Ingredients Recording</h4>
+                        <?php
+                        	session_start();
+                            if (isset($_SESSION['USERNAME'])) {
+                                header("location: data-bahan.php");
+                            }
+
+	                    	if (isset($_GET["stat"]) && ($_GET["stat"] == "incpt")) { ?>
+	                        	<h5 style="color:red">Please insert username and password in the textfield</h5>
+	                    	<?php } ?>
+                        <?php
+	                    	if (isset($_GET["stat"]) && ($_GET["stat"] == "fail")) { ?>
+	                        	<h5 style="color:red">Login failed.</h5>
+	                    	<?php } ?>	                    	
                     </div>
                     <div class="panel-body">
-                        <form accept-charset="UTF-8" role="form" class="form-signin">
-                            <fieldset>
+                        <form accept-charset="UTF-8" role="form" class="form-signin" action="login_handler.php" method="POST">
                                 <label class="panel-login">
                                     <div class="login_result"></div>
                                 </label>
-                                <input class="form-control" placeholder="Username" id="username" type="text">
-                                <input class="form-control" placeholder="Password" id="password" type="password">
+                                <input class="form-control" placeholder="Username" id="username" name="username" type="text">
+                                <input class="form-control" placeholder="Password" id="password" name="password" type="password">
                                 <br>
                                 <input class="btn btn-lg btn-success btn-block" type="submit" id="login" value="Login">
-                            </fieldset>
                         </form>
                     </div>
                 </div>

@@ -33,9 +33,9 @@
 					<h1 id="logo"><a href="#">One Eighty Ingredient Recording</a></h1>
 					<nav id="nav">
 						<ul>
-							<li><a href="data-transaksi.html">Transaksi</a></li>
-							<li><a href="data-bahan.html">Data Bahan</a></li>
-							<li><a href="login.html" class="button special">Log Out</a></li>
+							<li><a href="data-transaksi.php">Transaksi</a></li>
+							<li><a href="data-bahan.php">Data Bahan</a></li>
+							<li><a href="index.php?st=out" class="button special">Log Out</a></li>
 						</ul>
 					</nav>
 				</header>
@@ -49,11 +49,11 @@
 
 						<!-- Form -->
 							<section>
-								<form method="post" action="#">
+								<form method="get" action="tambah-bahan-handler.php">
 									<div class="row uniform 50%">
 										<div class="6u 12u$(xsmall)">
 											<label>Ingredient Name
-												<input type="text" name="nama-barang" id="nama-barang" value="" placeholder="" />
+												<input type="text" name="namabahan" id="namabahan" value="" placeholder="" />
 											</label>
 										</div>
 										<div class="6u$ 12u$(xsmall)">
@@ -61,11 +61,11 @@
 												<input type="text" name="satuan" id="satuan" value="" placeholder="" />
 											</label>
 										</div>
-
+										
 										<div class="12u$">
 											<ul class="actions">
 												<li><input type="submit" value="Submit" class="special" /></li>
-												<li><input type="reset" value="Cancel" onclick="location.href='data-bahan.html';"/></li>
+												<li><input type="reset" value="Cancel" onclick="location.href='data-bahan.php';"/></li>
 											</ul>
 										</div>
 									</div>

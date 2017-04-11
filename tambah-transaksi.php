@@ -32,9 +32,9 @@
 					<h1 id="logo"><a href="#">One Eighty Ingredient Recording</a></h1>
 					<nav id="nav">
 						<ul>
-							<li><a href="transaksi.html">Transaksi</a></li>
-							<li><a href="data-bahan.html">Data Bahan</a></li>
-							<li><a href="#" class="button special">Log Out</a></li>
+							<li><a href="data-transaksi.php">Transaksi</a></li>
+							<li><a href="data-bahan.php">Data Bahan</a></li>
+							<li><a href="index.php?st=out" class="button special">Log Out</a></li>
 						</ul>
 					</nav>
 				</header>
@@ -48,7 +48,7 @@
 
 						<!-- Form -->
 							<section>
-								<form method="post" action="#">
+								<form method="get" action="tambah-transaksi-handler.php">
 									<div class="row uniform 50%">
 										<div class="12u$">
 											<div class="select-wrapper">
@@ -62,14 +62,24 @@
 												</label>
 											</div>
 										</div>
+
+										<?php
+											$connection_string = "host=localhost dbname=dbsi user=postgres password=pass";
+											$conn = pg_connect($connection_string);
+											$result = pg_query($conn, "SELECT * FROM bahan ORDER BY id_bahan");	
+										?>										
 										<div class="12u$">
 											<div class="select-wrapper">
 												<label>Ingredient ID
 													<select name="id-barang" id="id-barang">
 														<option value="">ID Bahan</option>
-														<option value="1">1234567890</option>
-														<option value="2">1234371024</option>
-														<option value="3">0987654321</option>
+													<?php 
+														while ($row = pg_fetch_row($result)) {
+													?>
+														<option value=<?php echo $row[0]?>><?php echo $row[0]." - ".$row[1]?></option>
+													<?php 
+														}
+													?>
 													</select>
 												</label>
 											</div>
@@ -83,7 +93,7 @@
 										<div class="12u$">
 											<div class="form-group">
 												<label>Expired Date
-													<input type="text" class="form-control" placeholder="" id="datepicker" />
+													<input type="text" name ="tanggal-expired" class="form-control" placeholder="" id="datepicker" />
 												</label>
 											</div>
 										</div>
