@@ -37,12 +37,12 @@
 
 		$querystring = "UPDATE transaction
 			SET
-			tanggal_transaksi = NOW(), 
 			tipe_transaksi = '$tipetransaksi',
 			jumlah_perubahan = $jumlahperubahan, 
 			username = '$username', 
 			id_bahan = $idbahan, 
-			tanggal_expired = '$tanggalexpiredString'
+			tanggal_expired = '$tanggalexpiredString',
+			tanggal_transaksi_diubah = NOW()
 			WHERE 
 			transaction_id = $transactionid;";
 
@@ -50,7 +50,7 @@
 
 		$result = pg_query($conn, $querystring);	
 		
-		header("location: update-bahan-handler.php?idbahan=$idbahan");
+		// header("location: update-bahan-handler.php?idbahan=$idbahan");
 	} else {
 		header("location: data-transaksi.php");
 
